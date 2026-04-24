@@ -36,6 +36,8 @@ jobs:
         run: npm run docs:build
 
       # ---------- パスワードゲート（staticrypt で HTML を暗号化）----------
+      # staticrypt は入力を位置引数で受け取り、-d で出力ディレクトリを指定する
+      # -r をつけるとディレクトリ再帰。非HTMLファイル（CSS/JS/画像など）はそのままコピーされる
       - name: Encrypt built site with staticrypt
         env:
           SITE_PASSWORD: ${{ secrets.SITE_PASSWORD }}
@@ -44,9 +46,9 @@ jobs:
             echo "::warning::SITE_PASSWORD secret is not set. Site will be published WITHOUT password protection."
             exit 0
           fi
-          npx --yes staticrypt \
-            --directory docs/.vitepress/dist \
-            -d docs/.vitepress/dist \
+          npx --yes staticrypt docs/.vitepress/dist \
+            --recursive \
+            --directory staticrypt_out \
             --short \
             -p "$SITE_PASSWORD" \
             --template-title "CyTech IR 運用マニュアル" \
@@ -55,6 +57,9 @@ jobs:
             --template-color-primary "#2383E2" \
             --template-color-secondary "#fbfbfa" \
             --remember 7
+          # 暗号化済みサイトで元の dist を置き換える
+          rm -rf docs/.vitepress/dist
+          mv staticrypt_out docs/.vitepress/dist
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
