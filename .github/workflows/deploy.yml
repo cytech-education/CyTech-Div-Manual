@@ -36,8 +36,8 @@ jobs:
         run: npm run docs:build
 
       # ---------- パスワードゲート（staticrypt で HTML を暗号化）----------
-      # staticrypt は入力を位置引数で受け取り、-d で出力ディレクトリを指定する
-      # -r をつけるとディレクトリ再帰。非HTMLファイル（CSS/JS/画像など）はそのままコピーされる
+      # staticrypt にディレクトリ名を渡すと出力側にそのサブディレクトリが作られるので、
+      # dist に入って "." を入力にし、兄弟ディレクトリへ出力する
       - name: Encrypt built site with staticrypt
         env:
           SITE_PASSWORD: ${{ secrets.SITE_PASSWORD }}
@@ -46,9 +46,10 @@ jobs:
             echo "::warning::SITE_PASSWORD secret is not set. Site will be published WITHOUT password protection."
             exit 0
           fi
-          npx --yes staticrypt docs/.vitepress/dist \
+          pushd docs/.vitepress/dist >/dev/null
+          npx --yes staticrypt . \
             --recursive \
-            --directory staticrypt_out \
+            --directory ../dist_encrypted \
             --short \
             -p "$SITE_PASSWORD" \
             --template-title "CyTech IR 運用マニュアル" \
@@ -57,9 +58,14 @@ jobs:
             --template-color-primary "#2383E2" \
             --template-color-secondary "#fbfbfa" \
             --remember 7
-          # 暗号化済みサイトで元の dist を置き換える
+          popd >/dev/null
+          echo "---- encrypted output (first 30 entries) ----"
+          find docs/.vitepress/dist_encrypted -maxdepth 3 | head -30
+          # 置き換え
           rm -rf docs/.vitepress/dist
-          mv staticrypt_out docs/.vitepress/dist
+          mv docs/.vitepress/dist_encrypted docs/.vitepress/dist
+          echo "---- final dist root ----"
+          ls docs/.vitepress/dist | head -20
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
