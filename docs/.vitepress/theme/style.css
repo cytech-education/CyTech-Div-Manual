@@ -315,3 +315,105 @@ body {
 ::selection {
   background-color: rgba(35, 131, 226, 0.22);
 }
+
+/* ============================================================
+ * テーブル（Notion 風にシャープに）
+ * ========================================================= */
+.vp-doc table {
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--vp-c-divider);
+  border-collapse: separate;
+  border-spacing: 0;
+  display: table;
+  width: 100%;
+  margin: 16px 0;
+}
+
+.vp-doc table th,
+.vp-doc table td {
+  border: none;
+  border-bottom: 1px solid var(--vp-c-divider);
+  padding: 10px 14px;
+  font-size: 0.92rem;
+}
+
+.vp-doc table th {
+  background: var(--vp-c-bg-alt);
+  font-weight: 600;
+  color: var(--vp-c-text-1);
+  text-align: left;
+}
+
+.vp-doc table tr:last-child td {
+  border-bottom: none;
+}
+
+.vp-doc table tr:nth-child(2n) td {
+  background: transparent;
+}
+
+/* ============================================================
+ * ホームヒーロー：画像の余白・モバイル調整
+ * ========================================================= */
+.VPHero .container {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.VPHero .name,
+.VPHero .text {
+  letter-spacing: -0.015em;
+}
+
+.VPHero .tagline {
+  color: var(--vp-c-text-2);
+  line-height: 1.8;
+}
+
+.VPHero .image-bg {
+  animation: heroBg 12s ease-in-out infinite;
+}
+
+@keyframes heroBg {
+  0%, 100% { transform: translate(-50%, -50%) rotate(0deg); }
+  50% { transform: translate(-50%, -50%) rotate(8deg); }
+}
+
+/* ============================================================
+ * フェードイン（スクロール時の雰囲気）
+ * ========================================================= */
+@media (prefers-reduced-motion: no-preference) {
+  .vp-doc h1,
+  .vp-doc h2 {
+    animation: fadeSlide 0.4s ease;
+  }
+  @keyframes fadeSlide {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}
+
+/* ============================================================
+ * サイドバーの絵文字を少し下げて中央揃えに
+ * ========================================================= */
+.VPSidebarItem.level-0 > .item > .text {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* ============================================================
+ * ホームカード（features）— アイコンを大きめに
+ * ========================================================= */
+.VPFeature .icon {
+  width: 54px !important;
+  height: 54px !important;
+  border-radius: 14px !important;
+  background: var(--vp-c-bg-soft) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 1.8rem !important;
+  margin-bottom: 14px;
+}

@@ -2,28 +2,33 @@
 
 利用者からのチャット（Slack / Discord 等）への対応ポリシーをまとめています。
 
-## 確認・返信の頻度
-
-- **1〜2 時間に 1 回**の頻度で確認・対応を行うことが望ましい
-- ただし業務状況に応じて柔軟に調整可
-
-## 文体・対応スタンス
-
-- 固すぎない、**適度に親しみのある文体**を使用すること
-  - 例：「〜ですね！」「ご確認ありがとうございます！」など
-- ユーザーが**質問しやすく、相談しやすい雰囲気**づくりを意識する
-
-## 担当ユーザーの対応原則
-
-- 基本的には**自分の担当ユーザーのみ**を対応対象とする
-- 担当者が休みなどの場合に限り、他のメンバーが代理対応可
+<div class="rule-grid">
+  <div class="rule-card rule-card--freq">
+    <div class="rule-card__icon">⏱️</div>
+    <div class="rule-card__label">確認頻度</div>
+    <div class="rule-card__value">1〜2時間に1回</div>
+    <div class="rule-card__note">業務状況に応じて柔軟に調整可</div>
+  </div>
+  <div class="rule-card rule-card--tone">
+    <div class="rule-card__icon">💬</div>
+    <div class="rule-card__label">文体</div>
+    <div class="rule-card__value">適度に親しみのある</div>
+    <div class="rule-card__note">「〜ですね！」「ご確認ありがとうございます！」など</div>
+  </div>
+  <div class="rule-card rule-card--scope">
+    <div class="rule-card__icon">👤</div>
+    <div class="rule-card__label">担当範囲</div>
+    <div class="rule-card__value">自分の担当のみ</div>
+    <div class="rule-card__note">担当者が休みの場合のみ代理対応可</div>
+  </div>
+</div>
 
 ## 解決済み処理について
 
-:::warning 重要
-**こちらで「解決済み」にしないこと！**
+:::danger 重要：自分で「解決済み」にしない
+**こちらで「解決済み」にしない**こと！
 
-ユーザー側に非表示となってしまうため、必ず**ユーザー自身に解決済みにしてもらうよう促す**。
+ユーザー側に非表示となってしまうため、必ず**ユーザー自身に解決済みにしてもらう**よう促してください。
 :::
 
 ## 回答のスタンス
@@ -34,3 +39,48 @@
 :::
 
 関連：[コーチング心得](../policy/coaching)
+
+<style scoped>
+.rule-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+  margin: 20px 0 28px;
+}
+.rule-card {
+  padding: 18px 20px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 14px;
+  background: var(--vp-c-bg);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+.rule-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(15, 15, 15, 0.06);
+  border-color: var(--vp-c-border);
+}
+.rule-card__icon {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+.rule-card__label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--vp-c-text-3);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.rule-card__value {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--vp-c-text-1);
+  line-height: 1.4;
+  margin-bottom: 6px;
+}
+.rule-card__note {
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: var(--vp-c-text-2);
+}
+</style>
