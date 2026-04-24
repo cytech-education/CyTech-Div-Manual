@@ -1,0 +1,16 @@
+{
+  "name": "cytech-div-manual",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "CyTech 事業部 IR 向け運用マニュアルの Web 版",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "devDependencies": {
+    "vitepress": "^1.5.0",
+    "vue": "^3.5.13"
+  }
+}

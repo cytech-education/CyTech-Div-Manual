@@ -1,0 +1,317 @@
+/**
+ * Notion 風カスタムテーマ
+ * VitePress のデフォルトテーマを柔らかい印象にアレンジ
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* ============================================================
+ * カラー変数（ライト）
+ * Notion の公式カラートークンに寄せた配色
+ * ========================================================= */
+:root {
+  --vp-c-brand-1: #2383E2;
+  --vp-c-brand-2: #2383E2;
+  --vp-c-brand-3: #4da3ea;
+  --vp-c-brand-soft: rgba(35, 131, 226, 0.12);
+
+  --vp-c-bg: #ffffff;
+  --vp-c-bg-alt: #fbfbfa;
+  --vp-c-bg-soft: #f7f6f3;
+  --vp-c-bg-elv: #ffffff;
+
+  --vp-c-text-1: #37352f;
+  --vp-c-text-2: rgba(55, 53, 47, 0.72);
+  --vp-c-text-3: rgba(55, 53, 47, 0.5);
+
+  --vp-c-divider: rgba(55, 53, 47, 0.09);
+  --vp-c-border: rgba(55, 53, 47, 0.16);
+  --vp-c-gutter: rgba(55, 53, 47, 0.06);
+
+  --vp-font-family-base:
+    'Inter', 'Noto Sans JP', -apple-system, BlinkMacSystemFont, 'Hiragino Kaku Gothic ProN',
+    'Hiragino Sans', Meiryo, sans-serif;
+  --vp-font-family-mono:
+    'JetBrains Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+
+  /* Callout / Tip など */
+  --vp-custom-block-tip-border: transparent;
+  --vp-custom-block-tip-text: #2e6b44;
+  --vp-custom-block-tip-bg: #edf7ed;
+  --vp-custom-block-tip-code-bg: #d6ecd8;
+
+  --vp-custom-block-warning-border: transparent;
+  --vp-custom-block-warning-text: #8a6f00;
+  --vp-custom-block-warning-bg: #fdf5d5;
+  --vp-custom-block-warning-code-bg: #f7ead4;
+
+  --vp-custom-block-danger-border: transparent;
+  --vp-custom-block-danger-text: #a9352d;
+  --vp-custom-block-danger-bg: #fbeae7;
+  --vp-custom-block-danger-code-bg: #f3d4cf;
+}
+
+/* ============================================================
+ * カラー変数（ダーク）
+ * ========================================================= */
+.dark {
+  --vp-c-brand-1: #5ca7ed;
+  --vp-c-brand-2: #4da3ea;
+  --vp-c-brand-3: #6fb4f0;
+  --vp-c-brand-soft: rgba(92, 167, 237, 0.16);
+
+  --vp-c-bg: #191919;
+  --vp-c-bg-alt: #202020;
+  --vp-c-bg-soft: #2a2a2a;
+  --vp-c-bg-elv: #252525;
+
+  --vp-c-text-1: #e6e6e4;
+  --vp-c-text-2: rgba(230, 230, 228, 0.72);
+  --vp-c-text-3: rgba(230, 230, 228, 0.5);
+
+  --vp-c-divider: rgba(255, 255, 255, 0.08);
+  --vp-c-border: rgba(255, 255, 255, 0.14);
+  --vp-c-gutter: rgba(255, 255, 255, 0.05);
+
+  --vp-custom-block-tip-bg: rgba(72, 160, 90, 0.14);
+  --vp-custom-block-tip-text: #9dd6a9;
+  --vp-custom-block-warning-bg: rgba(239, 189, 0, 0.14);
+  --vp-custom-block-warning-text: #e9cf6a;
+  --vp-custom-block-danger-bg: rgba(226, 85, 72, 0.14);
+  --vp-custom-block-danger-text: #f19991;
+}
+
+/* ============================================================
+ * Home ヒーロー
+ * ========================================================= */
+:root {
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(135deg, #2383E2 30%, #8C5CE6 100%);
+  --vp-home-hero-image-background-image: linear-gradient(
+    -45deg,
+    rgba(35, 131, 226, 0.25) 50%,
+    rgba(140, 92, 230, 0.25) 50%
+  );
+  --vp-home-hero-image-filter: blur(56px);
+}
+
+/* ============================================================
+ * タイポグラフィ
+ * ========================================================= */
+html {
+  font-feature-settings: 'palt';
+}
+
+body {
+  font-family: var(--vp-font-family-base);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.vp-doc {
+  line-height: 1.8;
+}
+
+.vp-doc p {
+  margin: 1em 0;
+}
+
+.vp-doc h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-top: 0;
+  padding-bottom: 0.6em;
+  border-bottom: 1px solid var(--vp-c-divider);
+}
+
+.vp-doc h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-top: 2.2em;
+  padding-top: 0;
+  padding-bottom: 0.4em;
+  border-top: none;
+  border-bottom: 1px solid var(--vp-c-divider);
+  letter-spacing: -0.005em;
+}
+
+.vp-doc h3 {
+  font-size: 1.12rem;
+  font-weight: 600;
+  margin-top: 1.8em;
+  letter-spacing: 0;
+}
+
+.vp-doc h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 1.4em;
+}
+
+.vp-doc a {
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(35, 131, 226, 0.3);
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.vp-doc a:hover {
+  border-bottom-color: var(--vp-c-brand-1);
+}
+
+/* ============================================================
+ * コードブロック
+ * ========================================================= */
+.vp-doc :not(pre) > code {
+  background-color: var(--vp-c-bg-soft);
+  color: #eb5757;
+  padding: 0.12em 0.4em;
+  border-radius: 4px;
+  font-size: 0.88em;
+  font-weight: 500;
+}
+
+.dark .vp-doc :not(pre) > code {
+  color: #ff7b72;
+  background-color: rgba(255, 123, 114, 0.12);
+}
+
+.vp-doc div[class*='language-'] {
+  border-radius: 8px;
+  margin: 1.2em 0;
+  background-color: var(--vp-c-bg-soft);
+}
+
+.vp-doc div[class*='language-'] pre {
+  padding: 18px 0;
+}
+
+/* ============================================================
+ * Callout（:::tip :::warning :::danger）
+ * ========================================================= */
+.vp-doc .custom-block {
+  border-radius: 8px;
+  border: none;
+  padding: 16px 20px;
+  margin: 16px 0;
+}
+
+.vp-doc .custom-block-title {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* ============================================================
+ * サイドバー
+ * ========================================================= */
+.VPSidebar {
+  background-color: var(--vp-c-bg-alt) !important;
+  padding-top: 16px !important;
+}
+
+.VPSidebarItem.level-0 > .item > .text {
+  font-weight: 700 !important;
+  font-size: 0.82rem !important;
+  letter-spacing: 0.03em;
+  color: var(--vp-c-text-2) !important;
+  text-transform: none;
+}
+
+.VPSidebarItem.level-1 > .item > .link > .text {
+  font-size: 0.92rem;
+  font-weight: 400;
+  color: var(--vp-c-text-1);
+}
+
+.VPSidebarItem.is-active > .item > .link > .text {
+  color: var(--vp-c-brand-1) !important;
+  font-weight: 600;
+}
+
+/* ============================================================
+ * ナビバー
+ * ========================================================= */
+.VPNavBar .title {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.VPNavBar:not(.has-sidebar):not(.home.top) {
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: saturate(180%) blur(12px);
+}
+
+.dark .VPNavBar:not(.has-sidebar):not(.home.top) {
+  background-color: rgba(25, 25, 25, 0.85);
+}
+
+/* ============================================================
+ * Home カード（features）— Notion 風のふんわりカード
+ * ========================================================= */
+.VPFeature {
+  border-radius: 12px !important;
+  border: 1px solid var(--vp-c-divider) !important;
+  background-color: var(--vp-c-bg) !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.VPFeature:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(15, 15, 15, 0.06);
+  border-color: var(--vp-c-border) !important;
+}
+
+.VPFeature .title {
+  font-weight: 600;
+  letter-spacing: -0.005em;
+}
+
+.VPFeature .icon {
+  font-size: 1.6rem;
+  background: transparent;
+  width: auto;
+  height: auto;
+}
+
+/* ============================================================
+ * Hero ボタン
+ * ========================================================= */
+.VPButton.brand {
+  border-radius: 8px !important;
+  font-weight: 600;
+}
+
+.VPButton.alt {
+  border-radius: 8px !important;
+}
+
+/* ============================================================
+ * ページの最終更新・編集リンク
+ * ========================================================= */
+.VPDocFooter {
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid var(--vp-c-divider);
+}
+
+.VPLastUpdated,
+.VPLink.edit-link {
+  color: var(--vp-c-text-3);
+  font-size: 0.86rem;
+}
+
+/* ============================================================
+ * スクロールバー
+ * ========================================================= */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--vp-c-border) transparent;
+}
+
+/* ============================================================
+ * 選択範囲
+ * ========================================================= */
+::selection {
+  background-color: rgba(35, 131, 226, 0.22);
+}
