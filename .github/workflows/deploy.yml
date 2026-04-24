@@ -59,11 +59,11 @@ jobs:
             --template-color-secondary "#fbfbfa" \
             --remember 7
           popd >/dev/null
-          echo "---- encrypted output (first 30 entries) ----"
-          find docs/.vitepress/dist_encrypted -maxdepth 3 | head -30
-          # 置き換え
+          # staticrypt は出力内に入力ディレクトリの basename を必ず付けるので、
+          # 出力先にできた dist サブフォルダを掘り出して元の dist に置き換える
           rm -rf docs/.vitepress/dist
-          mv docs/.vitepress/dist_encrypted docs/.vitepress/dist
+          mv docs/.vitepress/dist_encrypted/dist docs/.vitepress/dist
+          rm -rf docs/.vitepress/dist_encrypted
           echo "---- final dist root ----"
           ls docs/.vitepress/dist | head -20
 
