@@ -59,6 +59,7 @@ export default defineConfig({
           { text: 'AI半自動レビュー', link: '/operations/review-ai' },
           { text: 'テストレビューカンペ', link: '/operations/review-template' },
           { text: 'シフト', link: '/operations/shift' },
+          { text: '各種集計について', link: '/operations/stats' },
         ],
       },
       {
