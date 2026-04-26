@@ -1,9 +1,9 @@
 <script setup lang="ts">
 // タブ切り替え
 // 使い方:
-// <Tabs :tabs="[{ label: 'ToC', key: 'toc' }, { label: '社内', key: 'internal' }]">
-//   <template #toc>ToC の内容</template>
+// <Tabs :tabs="[{ label: '社内', key: 'internal' }, { label: '共通', key: 'common' }]">
 //   <template #internal>社内の内容</template>
+//   <template #common>共通の内容</template>
 // </Tabs>
 import { ref } from 'vue'
 interface Tab {

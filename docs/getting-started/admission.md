@@ -72,36 +72,11 @@ CyTech 運営チーム
 
 ## アカウント発行について
 
-<Tabs :tabs="[
-  { label: 'ToC', key: 'toc', icon: '🧑' },
-  { label: '社内', key: 'internal', icon: '🏢' },
-]">
-
-<template #toc>
-
-**ToC アカウントの発行フロー**
-
-<FlowStep :steps="[
-  { title: 'カウンセラーから GL（紀谷）にアカウント発行依頼', icon: '📨' },
-  { title: 'GL が各 IR に発行を振り分け', icon: '🔀' },
-  { title: 'IR がアカウントを発行', icon: '🔑' },
-  { title: '『ToC ユーザー管理』に情報を記載', icon: '📊' },
-  { title: '詳細手順はアカウント発行・管理ページを参照', icon: '📖' },
-]" />
-
-👉 詳細：[アカウント発行・管理](../operations/account)
-
-</template>
-
-<template #internal>
-
 **社内アカウントの発行フロー**
 
 - 営業がアカウントを発行し、発行後に[アカウント発行・管理](../operations/account)のページに沿って記録・管理を行う
 
-</template>
-
-</Tabs>
+👉 詳細：[アカウント発行・管理](../operations/account)
 
 ## IR 配属について
 

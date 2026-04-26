@@ -112,7 +112,6 @@ GitHub Actions が起動し、数分で `https://cytech-education.github.io/CyTe
 
 | 内容 | 扱い |
 |------|------|
-| ToC 管理者アカウントの PW | Markdown に書かない。1Password 等で別管理 |
 | Zoom アカウントの PW | Markdown に書かない。別管理 |
 | 個人情報（氏名・メール等） | Markdown に書かない。管理シート側で管理 |
 | 公開ドキュメント URL（Drive 等） | 書いても可（閲覧権限はドキュメント側で制御される） |

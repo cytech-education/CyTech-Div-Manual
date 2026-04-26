@@ -5,18 +5,9 @@
 ## 面談実施ルール
 
 <Tabs :tabs="[
-  { label: 'ToC', key: 'toc', icon: '🧑' },
   { label: '社内', key: 'internal', icon: '🏢' },
   { label: '共通・録画', key: 'common', icon: '🎥' },
 ]">
-
-<template #toc>
-
-- 基本 **週 1 回**の面談を実施
-- 面談スケジュールは**事前にカレンダー登録** or 個別調整
-- 面談終了時には**次回の面談予定を必ず設定**
-
-</template>
 
 <template #internal>
 
@@ -43,7 +34,6 @@
 <FlowStep :steps="[
   { title: '目標の見直し・再設定', icon: '🎯' },
   { title: 'WBS の確認', body: '進捗・タスク消化状況など', icon: '📋' },
-  { title: '次回 MTG の設定', body: 'ToC のみ', icon: '🗓️' },
   { title: '学習内容に関する相談・助言', icon: '💡' },
 ]" />
 
