@@ -46,7 +46,6 @@ export default defineConfig({
           { text: '入学〜初回MTG', link: '/getting-started/admission' },
           { text: 'チーム開発（後半カリキュラム）', link: '/getting-started/team-dev' },
           { text: 'スキルシート作成', link: '/getting-started/skill-sheet' },
-          { text: '卒業時', link: '/getting-started/graduation' },
         ],
       },
       {
@@ -54,7 +53,6 @@ export default defineConfig({
         collapsed: false,
         items: [
           { text: 'アカウント発行・管理', link: '/operations/account' },
-          { text: 'Discord', link: '/operations/discord' },
           { text: '1on1', link: '/operations/one-on-one' },
           { text: 'チャット', link: '/operations/chat' },
           { text: 'テスト', link: '/operations/test' },

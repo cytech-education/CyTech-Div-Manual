@@ -19,7 +19,7 @@ hero:
 features:
   - icon: 🎓
     title: はじめに
-    details: 入学〜初回MTG、チーム開発、卒業時。新しい利用者を迎えるまでの一連の流れ。
+    details: 入学〜初回MTG、チーム開発、スキルシート作成。新しい利用者を迎えるまでの一連の流れ。
     link: /getting-started/admission
     linkText: セクションを開く
 

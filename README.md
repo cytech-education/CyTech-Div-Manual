@@ -53,7 +53,7 @@ npm run docs:preview   # ビルド済みサイトをローカルで確認
 各 Markdown のタイトル横に Vue コンポーネントを書くだけ：
 
 ```md
-# 卒業時 <StatusBadge status="wip" />
+# ページタイトル <StatusBadge status="wip" />
 ```
 
 `status` の値：

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 // ページのステータスを示すバッジ
-// 使い方: # 卒業時 <StatusBadge status="wip" />
+// 使い方: # ページタイトル <StatusBadge status="wip" />
 
 interface Props {
   status?: 'wip' | 'ready' | 'draft'

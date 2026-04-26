@@ -8,7 +8,7 @@
   { when: '毎月 第1・第3月曜', title: '入学', body: 'カウンセラーから発行依頼 → GL が各 IR に振り分け', status: 'done', icon: '🎓' },
   { when: '入学当日', title: '目標設定フォーム案内', body: 'とりあえず目標設定だけ先に行ってもらう（WBS や MTG は初回で対応）', status: 'done', icon: '📝' },
   { when: '入学直後', title: '初回MTG 予約メール送付', body: 'cytech@thenewgate.co.jp から予約フォーム URL 付きで送信', status: 'current', icon: '📧' },
-  { when: '入学後〜数日', title: '初回MTG 実施', body: '目標再設定・WBS 作成・自己紹介・次回予定・Discord 招待', status: 'upcoming', icon: '🗣️' },
+  { when: '入学後〜数日', title: '初回MTG 実施', body: '目標再設定・WBS 作成・自己紹介・次回予定の確認', status: 'upcoming', icon: '🗣️' },
 ]" />
 
 ## 入学タイミング
@@ -90,5 +90,4 @@ CyTech 運営チーム
   { title: 'インストラクターによる自己紹介', icon: '🙋' },
   { title: '利用者（受講者）の自己紹介', icon: '👤' },
   { title: '次回 MTG の予定調整', body: 'カレンダー予約など', icon: '🗓️' },
-  { title: 'コミュニティ（Discord）への招待', icon: '💬' },
 ]" />

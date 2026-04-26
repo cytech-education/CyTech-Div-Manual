@@ -1,6 +1,6 @@
 # チャット
 
-利用者からのチャット（Slack / Discord 等）への対応ポリシーをまとめています。
+利用者からのチャット（Slack 等）への対応ポリシーをまとめています。
 
 <div class="rule-grid">
   <div class="rule-card rule-card--freq">
