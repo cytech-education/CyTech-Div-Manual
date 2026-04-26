@@ -44,7 +44,8 @@ export default defineConfig({
         collapsed: false,
         items: [
           { text: '入学〜初回MTG', link: '/getting-started/admission' },
-          { text: 'チーム開発', link: '/getting-started/team-dev' },
+          { text: 'チーム開発（後半カリキュラム）', link: '/getting-started/team-dev' },
+          { text: 'スキルシート作成', link: '/getting-started/skill-sheet' },
           { text: '卒業時', link: '/getting-started/graduation' },
         ],
       },
