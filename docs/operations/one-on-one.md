@@ -6,6 +6,7 @@
 
 <Tabs :tabs="[
   { label: '社内', key: 'internal', icon: '🏢' },
+  { label: 'ToB', key: 'tob', icon: '🤝' },
   { label: '共通・録画', key: 'common', icon: '🎥' },
 ]">
 
@@ -13,6 +14,14 @@
 
 - 面談の頻度やスケジュールに特に指定なし
 - 必要に応じて面談を実施
+
+</template>
+
+<template #tob>
+
+- **月に N 回実施**とする
+  - 企業により変動。基本は**月 1 回**
+  - それ以上はオプションで**別料金**となる
 
 </template>
 
