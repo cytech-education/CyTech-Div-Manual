@@ -23,7 +23,6 @@ const items: Item[] = [
   { title: 'テスト', link: '/operations/test', status: 'ready', group: 'operations', icon: '✅' },
   { title: 'AI半自動レビュー', link: '/operations/review-ai', status: 'ready', group: 'operations', icon: '🤖' },
   { title: 'テストレビューカンペ', link: '/operations/review-template', status: 'ready', group: 'operations', icon: '📋' },
-  { title: 'シフト', link: '/operations/shift', status: 'wip', group: 'operations', icon: '🗓️' },
   { title: '各種集計について', link: '/operations/stats', status: 'wip', group: 'operations', icon: '📊' },
   { title: 'コーチング心得', link: '/policy/coaching', status: 'ready', group: 'policy', icon: '💡' },
   { title: 'スタッフ・初回面談', link: '/policy/first-meeting', status: 'ready', group: 'policy', icon: '🤝' },
