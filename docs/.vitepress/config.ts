@@ -45,6 +45,7 @@ export default defineConfig({
         items: [
           { text: 'フロー', link: '/getting-started/admission' },
           { text: 'チーム開発（後半カリキュラム）', link: '/getting-started/team-dev' },
+          { text: '旧CTチーム開発', link: '/getting-started/old-team-dev' },
           { text: 'スキルシート作成', link: '/getting-started/skill-sheet' },
         ],
       },

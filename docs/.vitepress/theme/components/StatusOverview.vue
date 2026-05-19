@@ -16,6 +16,7 @@ interface Item {
 const items: Item[] = [
   { title: '入学〜初回MTG', link: '/getting-started/admission', status: 'ready', group: 'getting-started', icon: '🎓' },
   { title: 'チーム開発', link: '/getting-started/team-dev', status: 'ready', group: 'getting-started', icon: '👥' },
+  { title: '旧CTチーム開発', link: '/getting-started/old-team-dev', status: 'ready', group: 'getting-started', icon: '🗂️' },
   { title: 'スキルシート作成', link: '/getting-started/skill-sheet', status: 'ready', group: 'getting-started', icon: '📋' },
   { title: 'アカウント発行・管理', link: '/operations/account', status: 'ready', group: 'operations', icon: '🔑' },
   { title: '1on1', link: '/operations/one-on-one', status: 'ready', group: 'operations', icon: '🗣️' },
